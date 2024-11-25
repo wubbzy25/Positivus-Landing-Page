@@ -141,8 +141,11 @@ button:hover {
   align-items: center;
   gap: 5vw;
   flex-wrap: wrap;
-  width: 8vw;
-  min-width: 140px;
+}
+
+.logos-container .logo-image-container {
+  width: 10vw;
+  min-width: 110px;
 }
 
 .logos-container img {
@@ -207,6 +210,6 @@ button:hover {
   }
   .logos-container {
     padding-top: 2rem;
-    gap: 3vw;
+    gap: 2vw 9vw;
   }
 }
