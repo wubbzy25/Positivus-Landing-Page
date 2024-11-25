@@ -141,11 +141,14 @@ button:hover {
   align-items: center;
   gap: 5vw;
   flex-wrap: wrap;
+  width: 8vw;
+  min-width: 140px;
 }
 
 .logos-container img {
-  width: 10vw;
-  min-width: 140px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .image-mobile .image-container {
