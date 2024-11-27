@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /*NAV BAR*/
@@ -116,6 +117,7 @@
   padding: 20px 30px;
   border: 1px solid #191a23;
   border-radius: 10px;
+  font-size: clamp(0.7rem, 1.3vw, 1.4rem);
 }
 
 .left-section {
@@ -201,10 +203,9 @@ button:hover {
 .second-section-container .cards {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 0;
+  justify-content: space-between;
+  padding: 2rem;
   margin: 0;
-  gap: 20px;
   width: 100%;
   height: 17vw;
   border-radius: 50px;
@@ -227,17 +228,161 @@ button:hover {
   background-color: #191a23;
 }
 
+.cards-container .black-color p {
+  color: #fff;
+}
+
 .second-section-container .cards .left-section {
   display: flex;
   flex-direction: column;
+  gap: 5rem;
   padding: 0;
   margin: 0;
+}
+.second-section-container .cards .left-section h3 {
+  font-size: clamp(1.2rem, 2.2vw, 3.2rem);
+}
+
+.second-section-container .cards .left-section p {
+  font-size: clamp(1rem, 1.5vw, 2.5rem);
+  font-weight: 500;
 }
 
 .second-section-container .cards .left-section .arrow-and-p-container {
   display: flex;
   gap: 0px 1rem;
+  align-items: center;
 }
+
+.second-section-container .cards .right-section.image-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.second-section-container .cards .left-section .circle-background {
+  width: 2.6vw;
+  height: 2.6vw;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+}
+
+.second-section-container .cards .left-section .circle-background-white {
+  background-color: #fff;
+}
+.second-section-container .cards .left-section .circle-background-dark {
+  background-color: #191a23;
+}
+
+.second-section-container
+  .cards
+  .left-section
+  .circle-background
+  .icon-container {
+  width: 1.5vw;
+  height: 1.5vw;
+  min-width: 7px;
+  min-height: 7px;
+  position: relative;
+}
+.second-section-container
+  .cards
+  .left-section
+  .circle-background
+  .icon-container
+  img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.second-section-container .cards .left-section .card-title-green {
+  background-color: #b9ff66;
+  border-radius: 10px;
+  padding: 2px;
+  line-height: 1rem;
+}
+
+.second-section-container .cards .left-section .card-title-white {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2px;
+  line-height: 1rem;
+}
+
+.second-section-container .bottom-card-container {
+  margin-top: 13rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-section-container .bottom-card-container .bottom-card {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #f3f3f3;
+  border-radius: 50px;
+  align-items: center;
+  gap: 20rem;
+  padding: 0 4rem;
+}
+
+.second-section-container .bottom-card-container .left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.second-section-container .bottom-card-container .left-section h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2.5rem);
+  font-weight: 700;
+}
+
+.second-section-container .bottom-card-container .bottom-card .left-section p {
+  font-size: clamp(0.7rem, 1.3vw, 1.5rem);
+}
+.second-section-container
+  .bottom-card-container
+  .bottom-card
+  .left-section
+  button {
+  width: max-content;
+  height: auto;
+  background-color: #191a23;
+  border: 1px solid #191a23;
+  border-radius: 10px;
+  padding: 1rem 2.5rem;
+  color: #fff;
+  font-size: clamp(0.7rem, 1.3vw, 1.4rem);
+}
+.second-section-container
+  .bottom-card-container
+  .bottom-card
+  .right-section
+  .image-container {
+  width: 25vw;
+  height: auto;
+}
+
+.second-section-container
+  .bottom-card-container
+  .bottom-card
+  .right-section
+  .image-container
+  img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media (width <= 1227px) {
   .list-and-button-container {
     display: none;
