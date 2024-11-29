@@ -439,6 +439,100 @@ button:hover {
   display: none;
 }
 
+.fourth-section {
+  padding: 0 4rem;
+}
+
+.fourth-section .fourth-section-title-and-p {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.fourth-section .fourth-section-title-and-p h2 {
+  background-color: #b9ff66;
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  padding: 0px 2px;
+  border-radius: 10px;
+}
+
+.fourth-section .fourth-section-title-and-p p {
+  width: 30%;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.fourth-section .cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin: 5rem 0;
+}
+
+.fourth-section .cards-container .cards {
+  width: 100%;
+  max-height: 120px;
+  background-color: #f3f3f3;
+  border-bottom: 6px solid #191919;
+  padding: 2rem 3rem;
+  border-radius: 50px;
+}
+
+.fourth-section .cards-container .cards.open {
+  background-color: #b9ff66;
+  max-height: 2400px;
+}
+
+.fourth-section .cards-container .cards .header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4rem;
+  position: relative;
+}
+.fourth-section .cards-container .cards .header-card .title-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.fourth-section .cards-container .cards .header-card .title-card h2 {
+  font-size: clamp(3rem, 4vw, 5rem);
+}
+.fourth-section .cards-container .cards .header-card .title-card h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+
+.fourth-section .cards-container .cards .header-card .icon-container {
+  width: 2.5vw;
+  cursor: pointer;
+}
+
+.fourth-section .cards-container .cards .header-card .icon-container img {
+  width: 100%;
+}
+
+.fourth-section .cards-container .cards .header-card::after {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: 2.2rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000;
+  border-radius: 10px;
+  display: none;
+}
+
+.fourth-section .cards-container .cards.open .header-card::after {
+  display: block;
+}
+
+.fourth-section .cards-container .cards .content {
+  font-size: clamp(1.2rem, 1.2vw, 2rem);
+  margin-bottom: 30px;
+  display: none;
+}
+
 @media (width <= 1227px) {
   .list-and-button-container {
     display: none;
@@ -605,7 +699,7 @@ button:hover {
     cursor: pointer;
   }
 
-  .arrow-and-p-container p {
+  .swiper .arrow-and-p-container p {
     color: #b9ff66;
     font-weight: bold;
   }
@@ -622,5 +716,26 @@ button:hover {
   .swiper {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .fourth-section {
+    padding: 0 2rem;
+  }
+  .fourth-section .fourth-section-title-and-p {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fourth-section .fourth-section-title-and-p h2 {
+    width: max-content;
+    text-align: center;
+  }
+
+  .fourth-section .fourth-section-title-and-p p {
+    width: 100%;
+    text-align: center;
+  }
+  .fourth-section .cards-container {
+    margin: 3rem 0;
   }
 }
