@@ -533,6 +533,105 @@ button:hover {
   display: none;
 }
 
+/*FIFTH SECTION*/
+
+.fifth-section {
+  padding: 0 60px;
+  width: 100%;
+}
+
+.fifth-section .title-and-p {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.fifth-section .title-and-p h2 {
+  background-color: #b9ff66;
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  padding: 0px 2px;
+  border-radius: 10px;
+}
+
+.fifth-section .title-and-p p {
+  width: 60%;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.fifth-section .cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  margin-top: 4rem;
+  gap: 20px;
+}
+
+.fifth-section .cards-container .cards {
+  width: 28vw;
+  padding: 35px 30px;
+  background-color: #fff;
+  border: 1px solid #191a23;
+  border-bottom: 6px solid #191919;
+  border-radius: 50px;
+  min-width: 20rem;
+}
+
+.fifth-section .cards-container .cards .header-card {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.fifth-section .cards-container .cards .header-card::after {
+  content: "";
+  position: absolute;
+  top: 8.2rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.fifth-section .cards-container .cards .header-card .circle-background {
+  align-self: flex-start;
+  width: 2.2vw;
+  height: 2.2vw;
+  min-width: 25px;
+  min-height: 25px;
+  background-color: #000000;
+  border-radius: 50px;
+  position: relative;
+}
+.fifth-section .cards-container .cards .header-card .icon-container {
+  width: 1.3vw;
+}
+
+.fifth-section .cards-container .cards .header-card .icon-container img {
+  width: 100%;
+  min-width: 14px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 4px;
+  margin-left: 6px;
+}
+.fifth-section .cards-container .cards .header-card .name-and-job {
+  display: flex;
+  flex-direction: column;
+}
+
+.fifth-section .cards-container .cards p {
+  font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+}
+.fifth-section .cards-container .cards .header-card .name-and-job h3 {
+  font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+}
+
+.fifth-section .cards-container .cards .header-card .name-and-job p {
+  font-size: clamp(1.1rem, 1.3vw, 1.5rem);
+}
+
 @media (width <= 1227px) {
   .list-and-button-container {
     display: none;
@@ -544,6 +643,28 @@ button:hover {
   }
   .nav-container {
     padding: 30px;
+    justify-content: space-between;
+  }
+}
+
+/*BIG SCREEN (1817)*/
+
+@media (min-width: 1817px) {
+  .fifth-section .cards-container .cards .header-card {
+    gap: 60px;
+  }
+}
+
+@media (width <= 1165px) {
+  .fifth-section .cards-container {
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+  }
+
+  .fifth-section .cards-container .cards {
+    width: 100%;
+  }
+
+  .fifth-section .cards-container .cards .header-card {
     justify-content: space-between;
   }
 }
@@ -737,5 +858,34 @@ button:hover {
   }
   .fourth-section .cards-container {
     margin: 3rem 0;
+  }
+
+  .fifth-section {
+    padding: 0 2rem;
+  }
+
+  .fifth-section .title-and-p {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .fifth-section .title-and-p h2 {
+    width: max-content;
+    text-align: center;
+  }
+  .fifth-section .title-and-p p {
+    width: 100%;
+    text-align: center;
+  }
+  .fifth-section .cards-container {
+    grid-template-columns: repeat(1, minmax(350px, 1fr));
+    margin-top: 3rem;
+  }
+
+  .fifth-section .cards-container .cards {
+    width: 100%;
+  }
+
+  .fifth-section .cards-container .cards .header-card {
+    justify-content: space-between;
   }
 }
