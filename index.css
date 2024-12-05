@@ -210,11 +210,13 @@ button:hover {
   width: 100%;
   height: 17vw;
   border-radius: 50px;
-  transition: transform 0.3s;
   min-height: 210px;
 }
+.cards {
+  transition: transform 0.3s;
+}
 
-.second-section-container .cards:hover {
+.cards:hover {
   transform: scale(1.05);
 }
 
@@ -632,6 +634,142 @@ button:hover {
   font-size: clamp(1.1rem, 1.3vw, 1.5rem);
 }
 
+footer {
+  margin: 0 4rem;
+  margin-top: 3rem;
+  background-color: #191a23;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 60px;
+}
+
+.header-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-footer h2 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+.header-footer p {
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-footer .image-and-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+}
+
+.header-footer ul {
+  display: flex;
+  gap: 40px;
+}
+
+.header-footer ul li {
+  list-style-type: none;
+}
+
+.header-footer ul li a {
+  color: white;
+}
+
+.header-footer .social-media-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-content {
+  padding-top: 60px;
+}
+
+.footer-content .left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-content .left-section h2 {
+  font-size: clamp(1.8rem, 2vw, 3rem);
+  background-color: #b9ff66;
+  font-weight: 900;
+  border-radius: 10px;
+}
+
+.footer-content .left-section p {
+  font-size: clamp(1rem, 1.3vw, 1.8rem);
+  color: #fff;
+}
+
+.footer-content .right-section .footer-card {
+  background-color: #292a32;
+  width: 40vw;
+  height: 15vw;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content .right-section .footer-card input {
+  width: 16vw;
+  height: 7vh;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0 20px;
+  background-color: #292a32;
+}
+
+.footer-content .right-section .footer-card button {
+  width: 16vw;
+  height: 7vh;
+  background-color: #b9ff66;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  font-size: clamp(1rem, 1vw, 2rem);
+  font-weight: 600;
+}
+
+.footer-footer {
+  position: relative;
+  margin-top: 6rem;
+  display: flex;
+  color: #fff;
+  gap: 4rem;
+  margin-bottom: 0;
+}
+
+.footer-footer a {
+  color: white;
+}
+
+footer .mobile-social-media {
+  display: none;
+}
+
+.footer-footer::before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: white;
+  border-radius: 10px;
+}
+
 @media (width <= 1227px) {
   .list-and-button-container {
     display: none;
@@ -804,12 +942,13 @@ button:hover {
     border-radius: 50px;
     padding: 35px 20px;
     width: 100%;
+  }
+
+  .cards {
     transition: transform 0.3s;
   }
 
-  .first-card:hover,
-  .second-card:hover,
-  .third-card:hover {
+  .cards:hover {
     transform: scale(1.05);
   }
 
@@ -887,5 +1026,76 @@ button:hover {
 
   .fifth-section .cards-container .cards .header-card {
     justify-content: space-between;
+  }
+
+  footer {
+    margin: 0;
+    margin-top: 40px;
+    border-radius: 0;
+  }
+
+  footer .mobile-social-media {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .header-footer .social-media-icons {
+    display: none;
+  }
+
+  .header-footer {
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-content .right-section .footer-card {
+    height: 50vw;
+    width: 80vw;
+  }
+
+  .footer-content .right-section .footer-card input {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #191a23;
+    color: #fff;
+    font-size: clamp(1rem, 1vw, 1rem);
+  }
+  .footer-content .right-section .footer-card button {
+    width: 85%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #b9ff66;
+    color: #191919;
+    cursor: pointer;
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-weight: 900;
+  }
+
+  .footer-content .left-section {
+    justify-content: center;
   }
 }
